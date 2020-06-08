@@ -30,6 +30,17 @@
             background: #f8dc52;
             width: 0%;
         }
+        
+        @media (max-width: 410px) {
+            html,
+            body,
+            div {
+                overflow-x: hidden;
+            }
+            .site-menu-toggle {
+                margin-right: -5px !important;
+            }
+        }
     </style>
 </head>
 
@@ -544,7 +555,7 @@
                     // loop
                     loop: true,
                     // false = infinite
-                    loopCount: 5,
+                    loopCount: false,
                     // show cursor
                     showCursor: true,
                     // character for cursor

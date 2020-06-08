@@ -78,7 +78,7 @@
             <div class="container">
                 <div class="row align-items-center justify-content-center">
                     <div class="col-md-8 text-center">
-                        <h1>We Are Dev Ops</h1>
+                        <h1>We Are <span id="typed"></span></h1>
                         <div class="mx-auto w-75">
                             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
                         </div>
@@ -491,7 +491,7 @@
 
         <!-- SCRIPTS -->
         <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
         <script src="js/isotope.pkgd.min.js"></script>
         <script src="js/stickyfill.min.js"></script>
         <script src="js/jquery.fancybox.min.js"></script>
@@ -499,11 +499,40 @@
         <script src="js/jquery.waypoints.min.js"></script>
         <script src="js/jquery.animateNumber.min.js"></script>
         <script src="js/custom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/1.1.7/typed.min.js"></script>
         <script>
             $(function() {
                 $(document).scroll(function() {
                     var $nav = $(".fixed-top");
                     $nav.toggleClass('scrolled', $(this).scrollTop() > $nav.height());
+                });
+            });
+        </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                Typed.new('#typed', {
+                    strings: ["Developer", "team", "community"],
+                    stringsElement: null,
+                    // typing speed
+                    typeSpeed: 40,
+                    // time before typing starts
+                    startDelay: 600,
+                    // backspacing speed
+                    backSpeed: 40,
+                    // time before backspacing
+                    backDelay: 500,
+                    // loop
+                    loop: true,
+                    // false = infinite
+                    loopCount: 5,
+                    // show cursor
+                    showCursor: true,
+                    // character for cursor
+                    cursorChar: "|",
+                    // attribute to type (null == text)
+                    attr: null,
+                    // either html or text
+                    contentType: 'html',
                 });
             });
         </script>

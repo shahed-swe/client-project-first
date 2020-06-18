@@ -579,6 +579,17 @@
                 document.getElementById("myBar").style.width = scrolled + "%";
             }
         </script>
+        <script>
+        $(document).bind("contextmenu", function(e) {
+            e.preventDefault();
+        });
+        $(document).keydown(function(e) {
+            if (e.which === 123) {
+                return false;
+            }
+        });
+        </script>
+        
 </body>
 
 </html>
